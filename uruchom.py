@@ -3,11 +3,11 @@
 # # Autor: Mikołaj Henzel, 2022
 # -----------------------------------
 
-from cgitb import text
 from tkinter import *
 from algorytmy.bubbleSort import bubble_sort
 from kolory.colors import *
 import time
+from playsound import playsound
 
 def run(tytul, data):
 
@@ -38,6 +38,7 @@ def run(tytul, data):
         bubble_sort(data, drawData, 0.001)
         end = time.time()
         l1.configure(text="Czas: " + str(end-start) + " sekund")
+        playsound('/dzwieki/sound.mp3')
 
     # Konfiguracja okna
 
