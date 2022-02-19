@@ -1,6 +1,8 @@
+from cgitb import text
 from tkinter import *
 from algorytmy.bubbleSort import bubble_sort
 from kolory.colors import *
+import time
 
 def run(tytul, data):
 
@@ -27,7 +29,10 @@ def run(tytul, data):
         window.update_idletasks()
 
     def generuj():
+        start = time.time()
         bubble_sort(data, drawData, 0.001)
+        end = time.time()
+        l1.configure(text="Czas: " + str(end-start) + " sekund")
 
     # Konfiguracja okna
 
@@ -37,6 +42,9 @@ def run(tytul, data):
 
     UI_frame = Frame(window, width= 900, height=300, bg=WHITE)
     UI_frame.grid(row=0, column=0, padx=10, pady=5)
+
+    l1 = Label(UI_frame, text="Mierzenie czasu...", bg=WHITE)
+    l1.grid(row=0, column=0, padx=10, pady=5, sticky=W)
 
     b3 = Button(UI_frame, text="Start", command=generuj, bg=LIGHT_GRAY)
     b3.grid(row=2, column=0, padx=5, pady=5)
