@@ -1,3 +1,8 @@
+
+# -----------------------------------
+# # Autor: Mikołaj Henzel, 2022
+# -----------------------------------
+
 from cgitb import text
 from tkinter import *
 from algorytmy.bubbleSort import bubble_sort

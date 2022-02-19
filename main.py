@@ -1,3 +1,8 @@
+
+# -----------------------------------
+# # Autor: Mikołaj Henzel, 2022
+# -----------------------------------
+
 from uruchom import run
 import random
 

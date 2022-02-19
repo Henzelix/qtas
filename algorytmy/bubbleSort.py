@@ -1,3 +1,8 @@
+
+# -----------------------------------
+# # Autor: Mikołaj Henzel, 2022
+# -----------------------------------
+
 # We need the time module to create some time difference between each comparison
 import time
 
