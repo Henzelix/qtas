@@ -10,7 +10,9 @@ import random
 
 tytuly = [
     "Bąbelkowe",
-    "Przez scalanie"
+    "Przez scalanie",
+    "QuickSort",
+    "Pozycyjne"
 ]
 
 x = 1
@@ -34,11 +36,8 @@ print(data)
 
 while(x!=0):
     # Wybór algorytmu sortowania
-    x = int(input("Wybierz algorytm:\n0. Zamknij\n1. Bąbelkowe\n2. Przez scalanie\n\n"))
+    x = int(input("Wybierz sortowanie:\n\n0. Zamknij\n1. Bąbelkowe\n2. Przez scalanie\n3. Szybkie\n4. Pozycyjne\n\n"))
 
     if(x!=0):
         dane = data.copy()
-        print(data)
         run(tytuly[x-1], dane, x)
-    else:
-        x = 0

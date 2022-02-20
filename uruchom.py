@@ -8,6 +8,9 @@
 from tkinter import *
 from algorytmy.bubbleSort import bubble_sort
 from algorytmy.mergeSort import merge_sort
+from algorytmy.quickSort import quick_sort
+from algorytmy.radixSort import radix_sort
+
 from kolory.colors import *
 import time
 # import winsound
@@ -25,7 +28,7 @@ def run(tytul, data, x):
         canvas_height = 400
         x_width = canvas_width / (len(data) + 1)
         offset = 4
-        spacing = 2
+        spacing = 1
         normalizedData = [i / max(data) for i in data]
 
         for i, height in enumerate(normalizedData):
@@ -41,7 +44,11 @@ def run(tytul, data, x):
         if x==1:
             bubble_sort(data, drawData, window)
         elif x==2:
-            merge_sort(data, 0, len(data)-1, drawData, window)
+            merge_sort(data, 0, len(data)-1, drawData, window),
+        elif x==3:
+            quick_sort(0, len(data)-1, data, drawData, window),
+        elif x==4:
+            radix_sort(data, drawData, window),
         end = time.time()
         l1.configure(text="Czas: " + str(end-start) + " sekund")
         # # Odtwarzanie dźwięku po przesortowaniu (działa tylko na Windowsie)
@@ -49,7 +56,7 @@ def run(tytul, data, x):
 
     # Konfiguracja okna
 
-    window.title("Sortowanie " + tytul)
+    window.title("Sortowanie " + tytul + "  |  Mikołaj Henzel")
     window.maxsize(1000, 700)
     window.config(bg = '#eb4034')
 
