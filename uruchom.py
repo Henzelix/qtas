@@ -7,6 +7,7 @@
 
 from tkinter import *
 from algorytmy.bubbleSort import bubble_sort
+from algorytmy.cocktailSort import cocktail_sort
 from algorytmy.mergeSort import merge_sort
 from algorytmy.quickSort import quick_sort
 from algorytmy.radixSort import radix_sort
@@ -49,6 +50,8 @@ def run(tytul, data, x):
             quick_sort(0, len(data)-1, data, drawData, window),
         elif x==4:
             radix_sort(data, drawData, window),
+        elif x==5:
+            cocktail_sort(data, drawData, window),
         end = time.time()
         l1.configure(text="Czas: " + str(end-start) + " sekund")
         # # Odtwarzanie dźwięku po przesortowaniu (działa tylko na Windowsie)
