@@ -1,6 +1,8 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*- 
 
 # -----------------------------------
-# # Autor: Mikołaj Henzel, 2022
+# Autor: Mikołaj Henzel, 2022
 # -----------------------------------
 
 from uruchom import run
@@ -37,6 +39,6 @@ while(x!=0):
     if(x!=0):
         dane = data.copy()
         print(data)
-        run(tytuly[x-1], dane)
+        run(tytuly[x-1], dane, x)
     else:
         x = 0
