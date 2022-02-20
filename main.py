@@ -43,3 +43,5 @@ while(x!=0):
     if(x!=0):
         dane = data.copy()
         run(tytuly[x-1], dane, x)
+    else:
+        x = 0
