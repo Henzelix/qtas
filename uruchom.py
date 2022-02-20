@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*- 
 
 # -----------------------------------
 # # Autor: Mikołaj Henzel, 2022
@@ -7,7 +9,8 @@ from tkinter import *
 from algorytmy.bubbleSort import bubble_sort
 from kolory.colors import *
 import time
-from playsound import playsound
+import threading
+import winsound
 
 def run(tytul, data):
 
@@ -31,14 +34,15 @@ def run(tytul, data):
             x1 = (i + 1) * x_width + offset
             y1 = canvas_height
             canvas.create_rectangle(x0, y0, x1, y1, fill=colorArray[i])
-        window.update_idletasks()
+        window.update()
 
     def generuj():
         start = time.time()
-        bubble_sort(data, drawData, 0.001)
+        bubble_sort(data, drawData, window)
         end = time.time()
         l1.configure(text="Czas: " + str(end-start) + " sekund")
-        playsound('/dzwieki/sound.mp3')
+        # Odtwarzanie dźwięku po przesortowaniu (działa tylko na Windowsie)
+        winsound.PlaySound('dzwieki/dzwiek.wav', winsound.SND_FILENAME)
 
     # Konfiguracja okna
 

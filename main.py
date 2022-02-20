@@ -1,6 +1,8 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*- 
 
 # -----------------------------------
-# # Autor: Mikołaj Henzel, 2022
+# Autor: Mikołaj Henzel, 2022
 # -----------------------------------
 
 from uruchom import run
