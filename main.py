@@ -13,7 +13,8 @@ tytuly = [
     "Przez scalanie",
     "QuickSort",
     "Pozycyjne",
-    "Koktajlowe"
+    "Koktajlowe",
+    "Przez kopcowanie"
 ]
 
 x = 1
@@ -37,7 +38,7 @@ print(data)
 
 while(x!=0):
     # Wybór algorytmu sortowania
-    x = int(input("Wybierz sortowanie:\n\n0. Zamknij\n1. Bąbelkowe\n2. Przez scalanie\n3. Szybkie\n4. Pozycyjne\n5. Koktajlowe\n\n"))
+    x = int(input("Wybierz sortowanie:\n\n0. Zamknij\n1. Bąbelkowe\n2. Przez scalanie\n3. Szybkie\n4. Pozycyjne\n5. Koktajlowe\n6. Przez kopcowanie\n\n"))
 
     if(x!=0):
         dane = data.copy()
